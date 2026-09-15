@@ -1,0 +1,25 @@
+[gd_resource type="TileSet" format=3 uid="uid://byqb3k26i0l7"]
+
+[ext_resource type="Texture2D" uid="uid://47o35pl1b7ou" path="res://assets/spritesPrueba/tileset_mazmorra.png" id="1_ac5e2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6pclf"]
+texture = ExtResource("1_ac5e2")
+1:0/0 = 0
+0:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+3:1/0 = 0
+2:1/0 = 0
+1:1/0 = 0
+1:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+2:2/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+3:3/0 = 0
+3:2/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_6pclf")

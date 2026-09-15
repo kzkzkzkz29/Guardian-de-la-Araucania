@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bq6nnt2aacsuh"]
+
+[ext_resource type="PackedScene" uid="uid://m0lme671orr1" path="res://scenes/bordes/bordes.tscn" id="1_6ku3t"]
+[ext_resource type="TileSet" uid="uid://byqb3k26i0l7" path="res://tile_sets/mazmorrat.tres" id="2_wn4a2"]
+
+[node name="Nivel1" type="Node2D" unique_id=1863262043]
+
+[node name="Bordes" parent="." unique_id=835640561 instance=ExtResource("1_6ku3t")]
+
+[node name="NivelDia" type="TileMapLayer" parent="." unique_id=979293316]
+tile_set = ExtResource("2_wn4a2")
