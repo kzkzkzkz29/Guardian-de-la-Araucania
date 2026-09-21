@@ -4,12 +4,14 @@ extends CharacterBody2D
 @export var speed: float = 160.0
 @export var jump_velocity: float = -320.0
 
-# Referencia al nodo hijo AnimatedSprite2D
+# Referencias directas a los nodos hijos de la escena
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-@export var area_2d = Area2D
+@onready var area_2d: Area2D = $Area2D
 
-func _ready():
-	area_2d.body_entered.connect(_on_area_2d_body_entered)
+func _ready() -> void:
+	# Conexión por código de la señal si no está conectada desde el editor
+	if not area_2d.body_entered.is_connected(_on_area_2d_body_entered):
+		area_2d.body_entered.connect(_on_area_2d_body_entered)
 
 func _physics_process(delta: float) -> void:
 	# 1. Aplicar gravedad continua si el personaje está en el aire
@@ -25,8 +27,14 @@ func _physics_process(delta: float) -> void:
 
 	if direction != 0.0:
 		velocity.x = direction * speed
-		# Voltear horizontalmente el sprite según la dirección hacia la que avanza
-		animated_sprite.flip_h = (direction < 0.0)
+		
+		# --- SOLUCIÓN DE SIMETRÍA (scale.x) ---
+		# En lugar de flip_h, invertimos scale.x para que el sprite gire sobre el eje central (X = 0)
+		# sin desfasar el rectángulo celeste de colisión.
+		if direction < 0.0:
+			animated_sprite.scale.x = -abs(animated_sprite.scale.x)
+		else:
+			animated_sprite.scale.x = abs(animated_sprite.scale.x)
 	else:
 		# Frenado suave cuando se sueltan las teclas
 		velocity.x = move_toward(velocity.x, 0.0, speed)
@@ -51,6 +59,6 @@ func gestionar_animaciones(direction: float) -> void:
 		# En el suelo y quieto
 		animated_sprite.play("idle")
 
-
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	# Verificación en consola al tocar pinchos u obstáculos sólidos
 	print("Muerto")

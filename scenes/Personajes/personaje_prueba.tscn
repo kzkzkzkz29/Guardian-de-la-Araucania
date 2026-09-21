@@ -9,18 +9,19 @@ size = Vector2(18, 38)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tbcmv"]
 size = Vector2(18, 38)
 
-[node name="PersonajePrueba" type="CharacterBody2D" unique_id=421525124 node_paths=PackedStringArray("area_2d")]
+[node name="PersonajePrueba" type="CharacterBody2D" unique_id=421525124]
+scale = Vector2(0.7, 0.7)
 collision_layer = 4
 script = ExtResource("1_t5hsq")
-area_2d = NodePath("Area2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=60591724]
 texture_filter = 1
 sprite_frames = ExtResource("1_kh54w")
-animation = &"saltar"
+animation = &"idle"
+offset = Vector2(5, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1697773850]
-position = Vector2(-5, 21)
+position = Vector2(0, 21)
 shape = SubResource("RectangleShape2D_3nda5")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1194857048]
@@ -28,5 +29,5 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1045278749]
-position = Vector2(-5, 21)
+position = Vector2(0, 21)
 shape = SubResource("RectangleShape2D_tbcmv")
