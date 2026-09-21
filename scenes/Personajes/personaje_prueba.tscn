@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://j2s6c8s42y5b"]
+
+[ext_resource type="SpriteFrames" uid="uid://r8spyn7e7x7r" path="res://scenes/Personajes/sprite_caballero.tres" id="1_kh54w"]
+[ext_resource type="Script" uid="uid://84w0du53ydbh" path="res://scenes/Personajes/personaje_prueba.gd" id="1_t5hsq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3nda5"]
+size = Vector2(18, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbcmv"]
+size = Vector2(18, 38)
+
+[node name="PersonajePrueba" type="CharacterBody2D" unique_id=421525124 node_paths=PackedStringArray("area_2d")]
+collision_layer = 4
+script = ExtResource("1_t5hsq")
+area_2d = NodePath("Area2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=60591724]
+texture_filter = 1
+sprite_frames = ExtResource("1_kh54w")
+animation = &"saltar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1697773850]
+position = Vector2(-5, 21)
+shape = SubResource("RectangleShape2D_3nda5")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1194857048]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1045278749]
+position = Vector2(-5, 21)
+shape = SubResource("RectangleShape2D_tbcmv")
