@@ -41,7 +41,7 @@ position = Vector2(-112, 73)
 position = Vector2(121, 56)
 
 [node name="CharcoAgua" parent="FuentesAgua" unique_id=1438557270 instance=ExtResource("5_c1gf7")]
-position = Vector2(-150, 103)
+position = Vector2(-150, 104)
 
 [node name="CharcoAgua3" parent="FuentesAgua" unique_id=965586968 instance=ExtResource("5_c1gf7")]
-position = Vector2(-22, 57)
+position = Vector2(-22, 56)
