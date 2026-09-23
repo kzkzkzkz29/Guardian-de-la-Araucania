@@ -64,6 +64,17 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	# Verificación en consola al tocar pinchos u obstáculos sólidos
 	print("Muerto")
 	
+# --- SISTEMA DE DAÑO Y SALUD ---
+func recibir_dano() -> void:
+	# POR AHORA: imprime "Muerto"
+	print("Te quemaste con el fuego")
+	
+	# CUANDO TENGAS LOS CORAZONES: solo tendrás que reemplazar esa línea por:
+	# vidas -= 1
+	# actualizar_interfaz_corazones()
+	# if vidas <= 0:
+	#     reiniciar_nivel()
+
 # Función para recargar agua (llamada por el charco)
 func recargar_agua() -> void:
 	tiene_agua = true

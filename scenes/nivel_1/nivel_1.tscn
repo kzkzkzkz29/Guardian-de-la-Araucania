@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://j2s6c8s42y5b" path="res://scenes/Personajes/personaje_prueba.tscn" id="3_wn4a2"]
 [ext_resource type="PackedScene" uid="uid://bx5bdmt66qufs" path="res://scenes/Objetos/Basura.tscn" id="4_trkee"]
 [ext_resource type="PackedScene" uid="uid://i6qe38wm46m6" path="res://scenes/Objetos/charco_agua.tscn" id="5_c1gf7"]
+[ext_resource type="PackedScene" uid="uid://by6ptn7op4pp0" path="res://scenes/Objetos/fuego.tscn" id="6_hugnv"]
 
 [node name="Nivel1" type="Node2D" unique_id=1863262043]
 
@@ -38,10 +39,15 @@ position = Vector2(-112, 73)
 [node name="FuentesAgua" type="Node2D" parent="." unique_id=2018269683]
 
 [node name="CharcoAgua2" parent="FuentesAgua" unique_id=537934824 instance=ExtResource("5_c1gf7")]
-position = Vector2(121, 56)
-
-[node name="CharcoAgua" parent="FuentesAgua" unique_id=1438557270 instance=ExtResource("5_c1gf7")]
-position = Vector2(-150, 104)
+position = Vector2(58, -24)
 
 [node name="CharcoAgua3" parent="FuentesAgua" unique_id=965586968 instance=ExtResource("5_c1gf7")]
 position = Vector2(-22, 56)
+
+[node name="FocosIncendio" type="Node2D" parent="." unique_id=1347841603]
+
+[node name="Fuego" parent="FocosIncendio" unique_id=1327436967 instance=ExtResource("6_hugnv")]
+position = Vector2(96.99999, 104.99999)
+
+[node name="Fuego2" parent="FocosIncendio" unique_id=1204386652 instance=ExtResource("6_hugnv")]
+position = Vector2(-66.99999, -38.999996)

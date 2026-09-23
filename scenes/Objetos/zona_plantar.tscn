@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cotsfcnqakiby"]
+
+[ext_resource type="Texture2D" uid="uid://bcg7jwpjr2ach" path="res://icon.svg" id="1_lm225"]
+
+[node name="ZonaPlantar" type="Area2D" unique_id=1320409871]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=958063914]
+modulate = Color(1.1822814, 0.5925106, 0.06447851, 1)
+texture = ExtResource("1_lm225")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1993293357]
