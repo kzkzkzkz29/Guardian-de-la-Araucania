@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bx5bdmt66qufs"]
+
+[ext_resource type="Script" uid="uid://ck87iq080ulwv" path="res://scenes/Objetos/basura.gd" id="1_7rbxe"]
+[ext_resource type="Texture2D" uid="uid://47o35pl1b7ou" path="res://assets/spritesPrueba/tileset_mazmorra.png" id="1_d6jfu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rbxe"]
+atlas = ExtResource("1_d6jfu")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3nda5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rbxe")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3nda5"]
+size = Vector2(16, 14)
+
+[node name="Basura" type="Area2D" unique_id=1900914644]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_7rbxe")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=628045303]
+sprite_frames = SubResource("SpriteFrames_3nda5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1570348686]
+shape = SubResource("RectangleShape2D_3nda5")

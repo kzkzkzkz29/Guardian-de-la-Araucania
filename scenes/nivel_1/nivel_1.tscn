@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://m0lme671orr1" path="res://scenes/bordes/bordes.tscn" id="1_6ku3t"]
 [ext_resource type="TileSet" uid="uid://byqb3k26i0l7" path="res://tile_sets/mazmorrat.tres" id="2_wn4a2"]
 [ext_resource type="PackedScene" uid="uid://j2s6c8s42y5b" path="res://scenes/Personajes/personaje_prueba.tscn" id="3_wn4a2"]
+[ext_resource type="PackedScene" uid="uid://bx5bdmt66qufs" path="res://scenes/Objetos/Basura.tscn" id="4_trkee"]
+[ext_resource type="PackedScene" uid="uid://i6qe38wm46m6" path="res://scenes/Objetos/charco_agua.tscn" id="5_c1gf7"]
 
 [node name="Nivel1" type="Node2D" unique_id=1863262043]
 
@@ -17,4 +19,29 @@ tile_map_data = PackedByteArray("AAD4/wYAAAAAAAAAAAD4/wUAAAAAAAAAAAD5/wUAAAAAAAA
 tile_set = ExtResource("2_wn4a2")
 
 [node name="PersonajePrueba" parent="." unique_id=421525124 instance=ExtResource("3_wn4a2")]
-position = Vector2(-183, 65)
+position = Vector2(-185, 58)
+
+[node name="Basuras" type="Node2D" parent="." unique_id=1757333308]
+
+[node name="Basura" parent="Basuras" unique_id=1900914644 instance=ExtResource("4_trkee")]
+position = Vector2(28, 105)
+
+[node name="Basura2" parent="Basuras" unique_id=31578503 instance=ExtResource("4_trkee")]
+position = Vector2(156, 105)
+
+[node name="Basura3" parent="Basuras" unique_id=1838289584 instance=ExtResource("4_trkee")]
+position = Vector2(150, 9)
+
+[node name="Basura5" parent="Basuras" unique_id=620207980 instance=ExtResource("4_trkee")]
+position = Vector2(-112, 73)
+
+[node name="FuentesAgua" type="Node2D" parent="." unique_id=2018269683]
+
+[node name="CharcoAgua2" parent="FuentesAgua" unique_id=537934824 instance=ExtResource("5_c1gf7")]
+position = Vector2(121, 56)
+
+[node name="CharcoAgua" parent="FuentesAgua" unique_id=1438557270 instance=ExtResource("5_c1gf7")]
+position = Vector2(-150, 103)
+
+[node name="CharcoAgua3" parent="FuentesAgua" unique_id=965586968 instance=ExtResource("5_c1gf7")]
+position = Vector2(-22, 57)

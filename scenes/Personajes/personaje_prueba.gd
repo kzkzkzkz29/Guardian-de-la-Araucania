@@ -3,6 +3,7 @@ extends CharacterBody2D
 # --- PARÁMETROS CONFIGURABLES EN EL INSPECTOR ---
 @export var speed: float = 160.0
 @export var jump_velocity: float = -320.0
+var tiene_agua: bool = false
 
 # Referencias directas a los nodos hijos de la escena
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -62,3 +63,17 @@ func gestionar_animaciones(direction: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	# Verificación en consola al tocar pinchos u obstáculos sólidos
 	print("Muerto")
+	
+# Función para recargar agua (llamada por el charco)
+func recargar_agua() -> void:
+	tiene_agua = true
+	print("Personaje cargó agua")
+	# Feedback visual temporal: teñimos ligeramente al personaje de celeste/azul
+	modulate = Color(0.6, 0.8, 1.0)
+
+# Función para gastar el agua (la usará el fuego más adelante)
+func usar_agua() -> void:
+	tiene_agua = false
+	print("Agua consumida al apagar el fuego")
+	# Volvemos a su color normal
+	modulate = Color(1.0, 1.0, 1.0)

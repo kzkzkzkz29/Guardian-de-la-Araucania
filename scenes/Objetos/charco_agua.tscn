@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://i6qe38wm46m6"]
+
+[ext_resource type="Script" uid="uid://cw8a5euccin7u" path="res://scenes/Objetos/charco_agua.gd" id="1_1qopa"]
+[ext_resource type="Texture2D" uid="uid://bcg7jwpjr2ach" path="res://icon.svg" id="1_jnaoy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3nda5"]
+size = Vector2(28, 6)
+
+[node name="CharcoAgua" type="Area2D" unique_id=537934824]
+collision_layer = 16
+collision_mask = 4
+script = ExtResource("1_1qopa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=951209221]
+modulate = Color(3.85046e-07, 0.6294229, 0.900025, 1)
+position = Vector2(6.000003, 4.999999)
+scale = Vector2(0.21874996, 0.04687501)
+texture = ExtResource("1_jnaoy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1206788577]
+position = Vector2(6, 5)
+shape = SubResource("RectangleShape2D_3nda5")
