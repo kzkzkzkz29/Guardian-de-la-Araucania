@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bx5bdmt66qufs" path="res://scenes/Objetos/Basura.tscn" id="4_trkee"]
 [ext_resource type="PackedScene" uid="uid://i6qe38wm46m6" path="res://scenes/Objetos/charco_agua.tscn" id="5_c1gf7"]
 [ext_resource type="PackedScene" uid="uid://by6ptn7op4pp0" path="res://scenes/Objetos/fuego.tscn" id="6_hugnv"]
+[ext_resource type="PackedScene" uid="uid://cotsfcnqakiby" path="res://scenes/Objetos/zona_plantar.tscn" id="7_1o66a"]
 
 [node name="Nivel1" type="Node2D" unique_id=1863262043]
 
@@ -51,3 +52,11 @@ position = Vector2(96.99999, 104.99999)
 
 [node name="Fuego2" parent="FocosIncendio" unique_id=1204386652 instance=ExtResource("6_hugnv")]
 position = Vector2(-66.99999, -38.999996)
+
+[node name="ZonasPlantado" type="Node2D" parent="." unique_id=1256521431]
+
+[node name="ZonaPlantar" parent="ZonasPlantado" unique_id=1320409871 instance=ExtResource("7_1o66a")]
+position = Vector2(56, 120)
+
+[node name="ZonaPlantar2" parent="ZonasPlantado" unique_id=1824729830 instance=ExtResource("7_1o66a")]
+position = Vector2(120, -56)
