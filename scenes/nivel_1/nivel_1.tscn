@@ -60,3 +60,6 @@ position = Vector2(56, 120)
 
 [node name="ZonaPlantar2" parent="ZonasPlantado" unique_id=1824729830 instance=ExtResource("7_1o66a")]
 position = Vector2(120, -56)
+
+[node name="ZonaPlantar3" parent="ZonasPlantado" unique_id=930034314 instance=ExtResource("7_1o66a")]
+position = Vector2(24, -24)
