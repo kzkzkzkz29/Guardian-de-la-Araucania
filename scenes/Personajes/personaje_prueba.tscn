@@ -31,3 +31,18 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1045278749]
 position = Vector2(0, 21)
 shape = SubResource("RectangleShape2D_tbcmv")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1344210595]
+zoom = Vector2(2, 2)
+limit_left = -224
+limit_top = -320
+limit_right = 10000
+limit_bottom = 128
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.1
+drag_top_margin = 0.05
+drag_right_margin = 0.1
+drag_bottom_margin = 0.05
+editor_draw_drag_margin = true
