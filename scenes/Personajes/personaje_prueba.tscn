@@ -35,13 +35,11 @@ shape = SubResource("RectangleShape2D_tbcmv")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1344210595]
 zoom = Vector2(2, 2)
 process_callback = 0
+limit_enabled = false
 limit_left = -224
 limit_top = -240
 limit_right = 10000
 limit_bottom = 245
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
 drag_left_margin = 0.1
 drag_top_margin = 0.0
 drag_right_margin = 0.1
