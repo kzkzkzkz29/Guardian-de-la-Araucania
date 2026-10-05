@@ -1,0 +1,70 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dr31r7qow7buy"]
+
+[ext_resource type="Texture2D" uid="uid://ce2v0kymph1vo" path="res://assets/spritesPrueba/corazones_32x32.png" id="1_2joxe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brau2"]
+atlas = ExtResource("1_2joxe")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwd2a"]
+atlas = ExtResource("1_2joxe")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvfxx"]
+atlas = ExtResource("1_2joxe")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jj4g5"]
+atlas = ExtResource("1_2joxe")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1qcc"]
+atlas = ExtResource("1_2joxe")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elwct"]
+atlas = ExtResource("1_2joxe")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpqfs"]
+atlas = ExtResource("1_2joxe")
+region = Rect2(128, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brau2")
+}],
+"loop": 1,
+"name": &"lleno",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwd2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvfxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jj4g5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1qcc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elwct")
+}],
+"loop": 0,
+"name": &"perder_vida",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpqfs")
+}],
+"loop": 1,
+"name": &"vacio",
+"speed": 5.0
+}]

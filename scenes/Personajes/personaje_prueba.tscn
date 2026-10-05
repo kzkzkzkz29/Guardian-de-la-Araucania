@@ -17,7 +17,7 @@ script = ExtResource("1_t5hsq")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=60591724]
 texture_filter = 1
 sprite_frames = ExtResource("1_kh54w")
-animation = &"idle"
+animation = &"caer"
 offset = Vector2(5, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1697773850]
@@ -45,3 +45,7 @@ drag_top_margin = 0.0
 drag_right_margin = 0.1
 drag_bottom_margin = 0.0
 editor_draw_drag_margin = true
+
+[node name="TimerInvulnerabilidad" type="Timer" parent="." unique_id=156639434]
+wait_time = 1.5
+one_shot = true

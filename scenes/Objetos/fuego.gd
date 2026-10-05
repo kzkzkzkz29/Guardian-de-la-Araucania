@@ -21,9 +21,9 @@ func _on_area_deteccion_body_entered(body: Node2D) -> void:
 		jugador_en_rango = true
 		jugador_referencia = body as CharacterBody2D
 		
-		# Si el monito entra en contacto y NO lleva agua cargada, recibe daño
+		# Si choca sin agua, le pasa su posición X para calcular el retroceso
 		if not jugador_referencia.tiene_agua:
-			jugador_referencia.recibir_dano()
+			jugador_referencia.recibir_dano(global_position.x)
 
 func _on_area_deteccion_body_exited(body: Node2D) -> void:
 	if body == jugador_referencia:
