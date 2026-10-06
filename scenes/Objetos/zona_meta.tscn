@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c23lkrhpp4dri"]
+
+[ext_resource type="Texture2D" uid="uid://bcg7jwpjr2ach" path="res://icon.svg" id="1_d3t4h"]
+[ext_resource type="Script" uid="uid://bqhkg4vkeyid8" path="res://scenes/Objetos/zona_meta.gd" id="1_ojesb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_br5q7"]
+size = Vector2(32, 40)
+
+[node name="ZonaMeta" type="Area2D" unique_id=1036461368]
+collision_layer = 16
+collision_mask = 4
+script = ExtResource("1_ojesb")
+
+[node name="SpriteArbol" type="Sprite2D" parent="." unique_id=821300385]
+modulate = Color(0.8768949, 0.44968134, 0.14640382, 0.7764706)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_d3t4h")
+offset = Vector2(0, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=291343300]
+position = Vector2(0, -20)
+shape = SubResource("RectangleShape2D_br5q7")

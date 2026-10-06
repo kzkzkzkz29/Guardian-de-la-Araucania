@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dbayy8scuss8o"]
+
+[ext_resource type="Script" uid="uid://d3snp61e647wq" path="res://scenes/UI/pantalla_victoria.gd" id="1_agvw7"]
+[ext_resource type="Texture2D" uid="uid://d4jmht7om4thh" path="res://assets/fichas/copihue.jpg" id="1_spf5q"]
+
+[node name="PantallaVictoria" type="CanvasLayer" unique_id=1234932798]
+script = ExtResource("1_agvw7")
+
+[node name="FondoOscuro" type="ColorRect" parent="." unique_id=1647963019]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.27450982)
+
+[node name="ContenedorCentrado" type="CenterContainer" parent="." unique_id=1718714649]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TarjetaPanel" type="PanelContainer" parent="ContenedorCentrado" unique_id=1761353918]
+custom_minimum_size = Vector2(340, 420)
+layout_mode = 2
+
+[node name="MargenInterno" type="MarginContainer" parent="ContenedorCentrado/TarjetaPanel" unique_id=1892878696]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 16
+
+[node name="ContenidoVertical" type="VBoxContainer" parent="ContenedorCentrado/TarjetaPanel/MargenInterno" unique_id=527241134]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="LabelTitulo" type="Label" parent="ContenedorCentrado/TarjetaPanel/MargenInterno/ContenidoVertical" unique_id=431992467]
+layout_mode = 2
+text = "Nivel Completado"
+horizontal_alignment = 1
+
+[node name="Separador1" type="HSeparator" parent="ContenedorCentrado/TarjetaPanel/MargenInterno/ContenidoVertical" unique_id=1320384600]
+layout_mode = 2
+
+[node name="IlustracionEspecia" type="TextureRect" parent="ContenedorCentrado/TarjetaPanel/MargenInterno/ContenidoVertical" unique_id=16173043]
+custom_minimum_size = Vector2(300, 250)
+layout_mode = 2
+texture = ExtResource("1_spf5q")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="LabelNombreEspecie" type="Label" parent="ContenedorCentrado/TarjetaPanel/MargenInterno/ContenidoVertical" unique_id=799401242]
+layout_mode = 2
+text = "Copihue (Lapageria rosea)"
+horizontal_alignment = 1
+
+[node name="LabelDatoCurioso" type="Label" parent="ContenedorCentrado/TarjetaPanel/MargenInterno/ContenidoVertical" unique_id=495631658]
+layout_mode = 2
+text = "Es la flor nacional de Chile. Crece en los bosques templados 
+del sur trepando por los árboles y sus flores rojas alimentan 
+al picaflor y a nuestro Monito del Monte"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="separador2" type="HSeparator" parent="ContenedorCentrado/TarjetaPanel/MargenInterno/ContenidoVertical" unique_id=760683778]
+layout_mode = 2
+
+[node name="BotonSalir" type="Button" parent="ContenedorCentrado/TarjetaPanel/MargenInterno/ContenidoVertical" unique_id=1355439201]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98450285, 0.8833971, 0, 1)
+text = "Salir"
