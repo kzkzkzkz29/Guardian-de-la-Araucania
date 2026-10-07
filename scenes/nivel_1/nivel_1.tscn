@@ -49,10 +49,10 @@ position = Vector2(-22, 56)
 [node name="FocosIncendio" type="Node2D" parent="." unique_id=1347841603]
 
 [node name="Fuego" parent="FocosIncendio" unique_id=1327436967 instance=ExtResource("6_hugnv")]
-position = Vector2(96.99999, 104.99999)
+position = Vector2(88, 98)
 
 [node name="Fuego2" parent="FocosIncendio" unique_id=1204386652 instance=ExtResource("6_hugnv")]
-position = Vector2(356, -55)
+position = Vector2(352, -62)
 
 [node name="ZonasPlantado" type="Node2D" parent="." unique_id=1256521431]
 

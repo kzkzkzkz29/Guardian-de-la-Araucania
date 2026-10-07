@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://by6ptn7op4pp0"]
 
 [ext_resource type="Script" uid="uid://bw8cu77ao28h" path="res://scenes/Objetos/fuego.gd" id="1_3esjd"]
-[ext_resource type="Texture2D" uid="uid://47o35pl1b7ou" path="res://assets/spritesPrueba/tileset_mazmorra.png" id="1_se6pk"]
+[ext_resource type="SpriteFrames" uid="uid://dyt15rmurdap5" path="res://assets/sprites/frames_humo.tres" id="2_tt4rc"]
+[ext_resource type="SpriteFrames" uid="uid://bhyu0j6cniaq" path="res://assets/sprites/frames_fuego.tres" id="3_bqytc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_br5q7"]
 radius = 241.03319
@@ -14,15 +15,23 @@ scale = Vector2(0.05, 0.05)
 collision_mask = 0
 script = ExtResource("1_3esjd")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1893866026]
-modulate = Color(0.99999994, 0.24331266, 0.6460483, 1)
-position = Vector2(4.999878, -2)
-scale = Vector2(34.59375, 31.84375)
-texture = ExtResource("1_se6pk")
-region_enabled = true
-region_rect = Rect2(47.51744, 47.40227, 16.48256, 16.410717)
+[node name="SpriteHumo" type="AnimatedSprite2D" parent="." unique_id=951697329]
+modulate = Color(0, 0, 0, 0.6745098)
+position = Vector2(20, -220)
+scale = Vector2(10, 10)
+sprite_frames = ExtResource("2_tt4rc")
+animation = &"humear"
+frame_progress = 0.2774355
+
+[node name="SpriteFuego" type="AnimatedSprite2D" parent="." unique_id=1695092438]
+position = Vector2(0, -14)
+scale = Vector2(10, 10)
+sprite_frames = ExtResource("3_bqytc")
+animation = &"arder"
+frame_progress = 0.58506864
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1132432821]
+visible = false
 position = Vector2(13, 4)
 shape = SubResource("CircleShape2D_br5q7")
 
@@ -31,5 +40,6 @@ collision_layer = 16
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDeteccion" unique_id=1363830606]
-position = Vector2(12, 6)
+visible = false
+position = Vector2(5.684342e-14, 59.999992)
 shape = SubResource("CircleShape2D_458wy")

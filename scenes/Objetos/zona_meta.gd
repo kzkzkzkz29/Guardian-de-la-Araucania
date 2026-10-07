@@ -64,4 +64,4 @@ func mostrar_pantalla_victoria() -> void:
 	get_tree().current_scene.add_child(pantalla)
 
 	# Rellenamos los datos del nivel actual
-	pantalla.mostrar_victoria("NIVEL RESTAURADO", nombre_especie, dato_curioso, imagen_educativa)
+	pantalla.mostrar_victoria("NIVEL COMPLETADO", nombre_especie, dato_curioso, imagen_educativa)
