@@ -21,14 +21,14 @@ position = Vector2(20, -220)
 scale = Vector2(10, 10)
 sprite_frames = ExtResource("2_tt4rc")
 animation = &"humear"
-frame_progress = 0.2774355
+frame_progress = 0.55521506
 
 [node name="SpriteFuego" type="AnimatedSprite2D" parent="." unique_id=1695092438]
 position = Vector2(0, -14)
 scale = Vector2(10, 10)
 sprite_frames = ExtResource("3_bqytc")
 animation = &"arder"
-frame_progress = 0.58506864
+frame_progress = 0.8628486
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1132432821]
 visible = false
