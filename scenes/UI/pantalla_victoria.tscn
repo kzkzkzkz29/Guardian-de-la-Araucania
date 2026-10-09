@@ -44,7 +44,7 @@ horizontal_alignment = 1
 [node name="Separador1" type="HSeparator" parent="ContenedorCentrado/TarjetaPanel/MargenInterno/ContenidoVertical" unique_id=1320384600]
 layout_mode = 2
 
-[node name="IlustracionEspecia" type="TextureRect" parent="ContenedorCentrado/TarjetaPanel/MargenInterno/ContenidoVertical" unique_id=16173043]
+[node name="IlustracionEspecie" type="TextureRect" parent="ContenedorCentrado/TarjetaPanel/MargenInterno/ContenidoVertical" unique_id=16173043]
 custom_minimum_size = Vector2(300, 250)
 layout_mode = 2
 texture = ExtResource("1_spf5q")

@@ -170,12 +170,10 @@ func _on_timer_invulnerabilidad_timeout() -> void:
 	print("Fin del periodo de invulnerabilidad.")
 
 func morir() -> void:
-	print("Sin vidas. Reiniciando nivel")
-	# Desactivamos procesos para evitar acciones durante la recarga
+	print("💀 Sin vidas. Reiniciando nivel...")
 	set_physics_process(false)
-	
-	# Recarga completa de la escena actual (restablece basuras, fuegos y posición)
-	get_tree().reload_current_scene()
+	get_tree().call_deferred("reload_current_scene")
+
 
 # --- DETECCIÓN DE AMENAZAS EXISTENTES ---
 
