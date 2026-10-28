@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://by6ptn7op4pp0" path="res://scenes/Objetos/fuego.tscn" id="6_hugnv"]
 [ext_resource type="PackedScene" uid="uid://cotsfcnqakiby" path="res://scenes/Objetos/zona_plantar.tscn" id="7_1o66a"]
 [ext_resource type="PackedScene" uid="uid://c23lkrhpp4dri" path="res://scenes/Objetos/zona_meta.tscn" id="8_bkf31"]
+[ext_resource type="PackedScene" uid="uid://bjyooqxumm6et" path="res://scenes/UI/hud.tscn" id="9_3eu2k"]
 
 [node name="Nivel1" type="Node2D" unique_id=1863262043]
 
@@ -67,3 +68,5 @@ position = Vector2(831, 103)
 
 [node name="ZonaMeta" parent="." unique_id=1036461368 instance=ExtResource("8_bkf31")]
 position = Vector2(1408, 96)
+
+[node name="HUD" parent="." unique_id=1749723127 instance=ExtResource("9_3eu2k")]

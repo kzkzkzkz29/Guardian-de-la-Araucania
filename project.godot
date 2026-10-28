@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Guardian de la Araucania"
-run/main_scene="uid://ih1ljgti7006"
+run/main_scene="uid://b46ac378at81e"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

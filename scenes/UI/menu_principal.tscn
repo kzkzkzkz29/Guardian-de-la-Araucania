@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://b46ac378at81e"]
+
+[ext_resource type="Script" uid="uid://cibyg1wytuo3o" path="res://scenes/UI/menu_principal.gd" id="1_j8qtn"]
+
+[node name="MenuPrincipal" type="Control" unique_id=1714983676]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j8qtn")
+
+[node name="fondo" type="ColorRect" parent="." unique_id=1507284237]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.07058824, 0.11764706, 0.09019608, 1)
+
+[node name="ContenedorCentrado" type="CenterContainer" parent="." unique_id=618702218]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContenedorGlobal" type="VBoxContainer" parent="ContenedorCentrado" unique_id=965425445]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Titulo" type="Label" parent="ContenedorCentrado/ContenedorGlobal" unique_id=803327087]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Guardian De La Araucanía"
+horizontal_alignment = 1
+
+[node name="PanelInicio" type="VBoxContainer" parent="ContenedorCentrado/ContenedorGlobal" unique_id=1507266831]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BotonJugar" type="Button" parent="ContenedorCentrado/ContenedorGlobal/PanelInicio" unique_id=87719968]
+custom_minimum_size = Vector2(220, 40)
+layout_mode = 2
+text = "Jugar"
+
+[node name="BotonOpciones" type="Button" parent="ContenedorCentrado/ContenedorGlobal/PanelInicio" unique_id=142766701]
+custom_minimum_size = Vector2(220, 40)
+layout_mode = 2
+text = "Opciones"
+
+[node name="BotonSalir" type="Button" parent="ContenedorCentrado/ContenedorGlobal/PanelInicio" unique_id=956875629]
+custom_minimum_size = Vector2(220, 40)
+layout_mode = 2
+text = "Salir del Juego"
+
+[node name="PanelNiveles" type="VBoxContainer" parent="ContenedorCentrado/ContenedorGlobal" unique_id=1940189355]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TituloNiveles" type="Label" parent="ContenedorCentrado/ContenedorGlobal/PanelNiveles" unique_id=1497311069]
+layout_mode = 2
+text = "Selecciona un Nivel"
+horizontal_alignment = 1
+
+[node name="BotonNivel1" type="Button" parent="ContenedorCentrado/ContenedorGlobal/PanelNiveles" unique_id=852434285]
+custom_minimum_size = Vector2(280, 38)
+layout_mode = 2
+text = "Nivel 1: Bosque de Dia"
+
+[node name="BotonNivel2" type="Button" parent="ContenedorCentrado/ContenedorGlobal/PanelNiveles" unique_id=1098939270]
+custom_minimum_size = Vector2(280, 38)
+layout_mode = 2
+text = "Nivel 2: Bosque de Noche"
+
+[node name="BotonNivel3" type="Button" parent="ContenedorCentrado/ContenedorGlobal/PanelNiveles" unique_id=1100051847]
+custom_minimum_size = Vector2(280, 38)
+layout_mode = 2
+text = "Nivel 3: Bosque al Atardecer"
+
+[node name="HSeparator" type="HSeparator" parent="ContenedorCentrado/ContenedorGlobal/PanelNiveles" unique_id=1272928850]
+layout_mode = 2
+
+[node name="BotonVolverNiveles" type="Button" parent="ContenedorCentrado/ContenedorGlobal/PanelNiveles" unique_id=353720015]
+custom_minimum_size = Vector2(0, 34)
+layout_mode = 2
+text = "Volver al Inicio"
+
+[node name="PanelOpciones" type="VBoxContainer" parent="ContenedorCentrado/ContenedorGlobal" unique_id=728701877]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Label" type="Label" parent="ContenedorCentrado/ContenedorGlobal/PanelOpciones" unique_id=1352334556]
+layout_mode = 2
+text = "Configuracion del Audio"
+horizontal_alignment = 1
+
+[node name="CheckMusica" type="CheckButton" parent="ContenedorCentrado/ContenedorGlobal/PanelOpciones" unique_id=661961932]
+layout_mode = 2
+button_pressed = true
+text = "Musica"
+alignment = 1
+
+[node name="CheckSFX" type="CheckButton" parent="ContenedorCentrado/ContenedorGlobal/PanelOpciones" unique_id=420785627]
+layout_mode = 2
+button_pressed = true
+text = "Efectos de Sonido"
+alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="ContenedorCentrado/ContenedorGlobal/PanelOpciones" unique_id=1588470789]
+layout_mode = 2
+
+[node name="BotonVolverOpciones" type="Button" parent="ContenedorCentrado/ContenedorGlobal/PanelOpciones" unique_id=673860396]
+custom_minimum_size = Vector2(0, 34)
+layout_mode = 2
+text = "Volver al Inicio
+"
